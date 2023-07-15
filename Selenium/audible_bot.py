@@ -5,7 +5,7 @@ web = "https://www.audible.ca/search"
 path = 'C:/chromedriver_win32/chromedriver.exe'
 driver = webdriver.Chrome(path)
 driver.get(web)
-driver.maximize_window()
+driver.maximize_window() # Maximize window to avoid elements not being found
 
 # Add implicit wait
 driver.implicitly_wait(10)  # Wait up to 10 seconds for elements to be found
