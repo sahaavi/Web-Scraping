@@ -1,4 +1,4 @@
-# Scrapy settings for scrapy_spider project
+# Scrapy settings for scrapy_mongo project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,14 +7,14 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = "scrapy_spider"
+BOT_NAME = "scrapy_mongo"
 
-SPIDER_MODULES = ["scrapy_spider.spiders"]
-NEWSPIDER_MODULE = "scrapy_spider.spiders"
+SPIDER_MODULES = ["scrapy_mongo.spiders"]
+NEWSPIDER_MODULE = "scrapy_mongo.spiders"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = "scrapy_spider (+http://www.yourdomain.com)"
+#USER_AGENT = "scrapy_mongo (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -41,22 +41,17 @@ DOWNLOAD_DELAY = 0.5
 #    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
 #    "Accept-Language": "en",
 #}
-## Change the above to this (to avoid getting blocked by the website): or you can use this in the actual spider file
-# DEFAULT_REQUEST_HEADERS = {
-#     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.82'
-# }
-
 
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    "scrapy_spider.middlewares.ScrapySpiderSpiderMiddleware": 543,
+#    "scrapy_mongo.middlewares.ScrapyMongoSpiderMiddleware": 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    "scrapy_spider.middlewares.ScrapySpiderDownloaderMiddleware": 543,
+#    "scrapy_mongo.middlewares.ScrapyMongoDownloaderMiddleware": 543,
 #}
 
 # Enable or disable extensions
@@ -68,7 +63,10 @@ DOWNLOAD_DELAY = 0.5
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   "scrapy_spider.pipelines.ScrapySpiderPipeline": 300,
+   # for mongodb
+   # "scrapy_mongo.pipelines.MongoDBPipeline": 300, # 300 is the priority of the pipeline, lower means higher priority
+   # for sqlite
+   "scrapy_mongo.pipelines.SQLitePipeline": 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

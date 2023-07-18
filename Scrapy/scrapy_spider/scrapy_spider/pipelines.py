@@ -9,5 +9,11 @@ from itemadapter import ItemAdapter
 
 
 class ScrapySpiderPipeline:
+    def open_spider(self, spider):
+        spider.logger.info("Spider opened: %s" % spider.name)
+    
+    def close_spider(self, spider):
+        spider.logger.info("Spider closed: %s" % spider.name)
+        
     def process_item(self, item, spider):
         return item
