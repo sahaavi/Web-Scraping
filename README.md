@@ -1,7 +1,7 @@
 # Web-Scraping
 
 ## Demo
-<video width="320" height="240" controls> <source src="images/twitter_bot.mp4" type="video/mp4"> </video>
+![](images/twitter_bot.gif)
 
 ## BeautifulSoup
 BeautifulSoup can pull data out of HTML in XML files. This library is best choice for beginners beacuse it is the easiest web scrapping library in Python.  
