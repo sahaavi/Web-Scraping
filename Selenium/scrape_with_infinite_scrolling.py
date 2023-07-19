@@ -108,7 +108,7 @@ while scrolling:
             break
 
 print("Scraping done!")
-time.sleep(5)
+time.sleep(3)
 driver.quit() # close chrome driver
 
 tweets_df = pd.DataFrame({'user': user_data, 'tweet_text': text_data, 'reply_count': reply_data, 'retweet_count': retweet_data, 'like_count': like_data, 'tweet_id': tweet_ids_list})

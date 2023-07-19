@@ -1,5 +1,8 @@
 # Web-Scraping
 
+## Demo
+<video width="320" height="240" controls> <source src="images/twitter_bot.mp4" type="video/mp4"> </video>
+
 ## BeautifulSoup
 BeautifulSoup can pull data out of HTML in XML files. This library is best choice for beginners beacuse it is the easiest web scrapping library in Python.  
 Unfortunately, beautifulsoup doesn't have the support for JavaScript driven websites. This is a big disadvantage as nowadays majority of the websites run on JavaScript. Also beautifulsoup is inefficient and it has some dependencies that make it complicated to transfer a code between projects.
